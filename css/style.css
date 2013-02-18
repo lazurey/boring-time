@@ -1,0 +1,54 @@
+/*
+#69D2E7 deep blue
+#A7DBD8 light blue
+#E0E4CC light brown
+#F38630 light orange
+#FA6900 dark orange
+#FE4365 dark pink
+*/
+
+body {
+	background: url(../images/bg.png);
+}
+
+ul li {
+	list-style: none;
+}
+
+.home-guess {
+	background: white;
+	border-radius: 6px;
+	border: 1px solid #c5c5c5;
+	padding: 20px;
+	vertical-align: middle;
+	margin-bottom: 40px;
+}
+
+.home-list ul li {
+	float: left;
+	padding: 10px 20px;
+}
+
+.tab-content {
+	background: white;
+}
+
+#content-tab {
+	margin-bottom: 0;
+}
+
+.home-title {
+	padding: 20px;
+	border-bottom: 10px solid #c5c5c5;
+	margin-bottom: 10px;
+	text-align: bottom;
+}
+
+#suggestion ul li a, #request ul li a {
+	background: #E0E4CC;
+	padding: 5px;
+}
+
+#suggestion ul li a:hover, #request ul li a:hover {
+	color: #FE4365;
+}
