@@ -17,11 +17,53 @@ ul li {
 
 .home-guess {
 	background: white;
-	border-radius: 6px;
-	border: 1px solid #c5c5c5;
-	padding: 20px;
+	border-top: 22px solid gray;
+	border-bottom: 5px solid gray;
+	padding: 20px 60px;
 	vertical-align: middle;
 	margin-bottom: 40px;
+	margin-left: 100px;
+	width: 200px;
+}
+
+.home-suggestion, .home-guess {
+	float: left;
+	min-height: 270px;
+}
+
+.home-request {
+	float: right;
+}
+
+.home-suggestion, .home-request {
+	width: 185px;
+	padding: 10px;
+}
+
+.home-project {
+	width: 940px;
+	clear: both;
+}
+
+.boring-today {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.today-day {
+	font-size: 160px;
+	line-height: 100px;
+	font-weight: bold;
+}
+
+.today-month {
+	font-size: 30px;
+	line-height: 40px;
+}
+
+.today-date:hover {
+	background: none;
+	color: #FE4365;
 }
 
 .home-list ul li {
@@ -29,26 +71,27 @@ ul li {
 	padding: 10px 20px;
 }
 
-.tab-content {
-	background: white;
+.home-project ul li {
+	font-size: 80px;
+	font-weight: bold;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	float: left;
+	margin: 0 20px 20px 0;
+	padding: 10px;
+	text-align: center;
+	background: #69D2E7;
 }
 
-#content-tab {
-	margin-bottom: 0;
+.home-project ul li a {
+	color: #FFFFFF;
 }
 
-.home-title {
+footer {
 	padding: 20px;
-	border-bottom: 10px solid #c5c5c5;
-	margin-bottom: 10px;
-	text-align: bottom;
-}
-
-#suggestion ul li a, #request ul li a {
-	background: #E0E4CC;
-	padding: 5px;
-}
-
-#suggestion ul li a:hover, #request ul li a:hover {
-	color: #FE4365;
+	margin-top: 20px;
+	text-align: right;
+	border-top: 1px dotted #c5c5c5;
+	color: #c5c5c5;
 }
