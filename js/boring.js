@@ -27,15 +27,6 @@ function addNewItem() {
 	      	alert("添加成功!");
 	        location.href = "index.php";
 	      });
-	    } else {
-	      $.ajax({
-	        url: "add-address.php",
-	        data: "addr_tag=" + addr_tag + "&address=" + address + "&addr_status=" +
-	          addr_status + "",
-	        type: "POST" 
-	      }).done(function(data) {
-	        location.href = "my-address.php";
-	      });
 	    }
 	  });
   }

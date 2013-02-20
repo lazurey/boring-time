@@ -58,7 +58,7 @@
 		<div class="control-group">
 			<label class="control-label" for="word">一个字</label>
 			<div class="controls">
-				<input type="text" id="word" name="word" placeholder="用一个字描述你的项目">
+				<input type="text" id="word" name="word" placeholder="用一个字描述你的项目" required>
 			</div>
 		</div>
 		<div class="control-group">
