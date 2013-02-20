@@ -1,3 +1,7 @@
+<?php 
+	include 'db_local.inc.php';
+	mysql_query("SET NAMES 'utf8'");
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
@@ -14,13 +18,14 @@
 		<div class="navbar-inner">
 		    <a class="brand" href="index.php">无聊之集</a>
 			<ul class="nav">
-				<li class="active">
+				<li>
 					<a href="index.php">首页</a>
 				</li>
 				<li><a href="#">建议</a></li>
 				<li><a href="#">跪求</a></li>
 				<li><a href="#">项目</a></li>
 				<li><a href="about.php">关于</a></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
 				<li><a href="#">无聊的我</a></li>
 				<li><a href="#">退出</a></li>
 			</ul>
@@ -29,6 +34,11 @@
 	<header class="container home-title clearfix">
 		<div class="span6">
 			<h1>无聊的我</h1>
-			<a class="btn btn-link" href="start-kill.php">Start</a>
+		</div>
+		<div class="span4">
+			<a class="btn btn-large btn-block start-btn" href="start-page.php">Start to kill it</a>
+		</div>
+		<div class="span12">
+			<p class="boring-line">我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/我是无聊的分割线\/</p>
 		</div>
 	</header>

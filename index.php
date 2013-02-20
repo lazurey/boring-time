@@ -3,10 +3,10 @@ include('head.php');
  ?>
 	<div class="container">
 		<aside class="home-suggestion">
-			<h3>
+			<h4>
 				<i class="icon-time"></i>
-				我有5分钟...
-			</h3>
+				我有5分钟, 想看看别人的建议
+			</h4>
 			<ul class="clearfix">
 		  		<li><a href="/">一起去看流星雨</a></li>
 		  		<li><a href="/">一起去看流星雨</a></li>
@@ -38,10 +38,10 @@ include('head.php');
 			</ul>
 		</section>
 		<aside class="home-request clearfix">
-			<h3>
+			<h4>
 				<i class="icon-time"></i><i class="icon-time"></i>
-				我有10分钟...
-			</h3>
+				我有10分钟, 愿意帮个小忙...
+			</h4>
 			<ul class="clearfix">
 		  		<li><a href="/">一起去看流星雨</a></li>
 		  		<li><a href="/">一起去看流星雨</a></li>
@@ -53,10 +53,10 @@ include('head.php');
 		  	<a href="/"><i class="icon-arrow-right"></i>更多建议</a>
 		</aside>
 		<section class="home-project clearfix">
-			<h3>
+			<h4>
 				<i class="icon-time"></i><i class="icon-time"></i><i class="icon-time"></i>
-				我有30分钟以上...
-			</h3>
+				我有30+分钟, 想做点什么...
+			</h4>
 			<ul class="clearfix">
 		  		<li><a href="/">一</a></li>
 		  		<li><a href="/">起</a></li>
