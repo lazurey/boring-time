@@ -1,6 +1,6 @@
 <?php 
 	include('head.php');
-// standard page template
+	// standard page template
 ?>
 <article class="container min-main">
 	<p>
