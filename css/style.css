@@ -129,3 +129,11 @@ footer {
 	border-top: 1px dotted #c5c5c5;
 	color: #c5c5c5;
 }
+
+.user-img {
+	width: 100px;
+}
+
+.selected-img {
+	border: 6px dotted red;
+}

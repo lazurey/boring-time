@@ -1,6 +1,22 @@
 <?php 
-	include 'db_local.inc.php';
+	include 'db.inc.php';
 	mysql_query("SET NAMES 'utf8'");
+
+	$loginFlag = false;
+	$reqUrl = trim($_SERVER["REQUEST_URI"]);
+	$frontFlag = false;
+	if (preg_match("/index.php/i", $reqUrl) || preg_match("/register.php/i", $reqUrl)) {
+		$frontFlag = true;
+	}
+	if (isset($_COOKIE['uid'])) {
+		$loginFlag = true;
+		$cook_uid = $_COOKIE['uid'];
+		$cook_name = $_COOKIE['uname'];
+	} else {
+		if (!$frontFlag) {
+			echo "<script> location.href='login.php';</script>";
+		}
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -26,8 +42,13 @@
 				<li><a href="#">项目</a></li>
 				<li><a href="about.php">关于</a></li>
 				<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-				<li><a href="#">无聊的我</a></li>
-				<li><a href="#">退出</a></li>
+				<?php if ($loginFlag) { ?> 
+					<li><a href="my-setting.php"><i class="icon-wrench"></i>&nbsp;<?php print $cook_name; ?></a></li>
+					<li><a href="logout.php">退出</a></li>
+				<?php } else { ?> 
+					<li><a href="login.php">登陆</a></li>
+					<li><a href="register.php">注册</a></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>

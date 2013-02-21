@@ -30,13 +30,13 @@
 		<div class="control-group">
 			<label class="control-label" for="cat">分类</label>
 			<div class="controls">
-				<input type="text" id="cat">
+				<input type="text" id="cat" name="cat">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="text" id="tag">
+				<input type="text" id="tag" name="tag">
 			</div>
 		</div>
 	</div>

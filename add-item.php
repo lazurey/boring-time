@@ -8,12 +8,11 @@ function checkEmpty($str) {
 		return $str;
 	}
 }
-echo "<script>alert(1);</script>";
 if (isset($_POST['type'])) {
 	$type = intval(trim($_POST['type']));
 	$title = trim($_POST['title']);
 	$desc = trim($_POST['desc']);
-	$uid = 1;
+	$uid = $cook_uid;
 	$cat = trim($_POST['cat']);
 	$tag = trim($_POST['tag']);
 	$status = trim($_POST['status']);
