@@ -71,9 +71,57 @@ function actRegForm() {
   }
 }
 
+function actAchForm() {
+	if ($("#add-achieve")) {
+		$("#add-achieve").submit(function(event) {
+	    event.preventDefault();
+	    
+	    var $form = $(this),
+	        title = $form.find('input[name="title"]').val(),
+	        desc = $("input[name='desc']").val();
+
+	    var post_str = "title=" + title + "&desc=" + desc;
+
+		$.ajax({
+			url: "add-achieve.php",
+			data: post_str,
+			type: "POST"
+		}).done(function(data) {
+			alert("添加成功!");
+			location.href = "achievement-list.php";
+		});
+	  });
+  }
+}
+
+function addAccordionTable() {
+	if ($('.achieve-table .achieve-desc')) {
+		$('.achieve-table .achieve-desc h5').each(function() {
+			$(this).click(function(){
+				$(this).next().toggle('fast');
+			});
+		});
+	}
+}
+
+function achieveIt(aid) {
+	if (aid > 0 && aid != 'undefined') {
+		var post_str = "aid=" + aid;
+		$.ajax({
+			url: "add-relate.php",
+			data: post_str,
+			type: "POST"
+		}).done(function(data) {
+			location.href = "achievement-list.php";
+		});
+	}
+}
+
 $(function() {
 	// for the add item page form
 	addNewItem();
 	actRegForm();
+	actAchForm();
+	addAccordionTable();
 });
 

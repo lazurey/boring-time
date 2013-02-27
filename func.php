@@ -16,4 +16,12 @@ function getItemQuerySql ($tid) {
 	$query .= " AND t.uid = u.uid";
 	return $query;
 }
+
+function checkEmpty($str) {
+	if ($str == "" || strlen($str) < 1) {
+		return "";
+	} else {
+		return $str;
+	}
+}
 ?>

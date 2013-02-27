@@ -137,3 +137,20 @@ footer {
 .selected-img {
 	border: 6px dotted red;
 }
+
+/* 成就页面 */
+.control-section {
+	margin: 20px;
+}
+.table .achieve-process {
+	width: 130px;
+	text-align: center;
+	vertical-align: middle;
+}
+.achieve-table .achieve-desc p {
+	display: none;
+}
+
+.achieve-table .achieve-desc {
+	cursor: pointer;
+}

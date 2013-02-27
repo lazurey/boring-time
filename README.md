@@ -40,3 +40,9 @@
 
 * 数据库链接放在db.inc.php中.
 * 数据表在bt.sql中.
+* bt_relate, rtype定义:
+
+| type | aid | bid |
+| ---- | --- | --- |
+|  1   | uid | tid |
+|  2   | uid | aid |

@@ -1,13 +1,6 @@
 <?php 
 include 'head-clean.php';
 
-function checkEmpty($str) {
-	if ($str == "" || strlen($str) < 1) {
-		return "";
-	} else {
-		return $str;
-	}
-}
 if (isset($_POST['type'])) {
 	$type = intval(trim($_POST['type']));
 	$title = trim($_POST['title']);
@@ -22,6 +15,7 @@ if (isset($_POST['type'])) {
 	if ($type == 1 || $type == 2) { // suggestion || request
 		$query .= " ('', '" . $title . "', " . $type . ", '" . $tag . "', " . $cat . ", '" . $desc . "', ";
 		$query .= $uid . ", '', '', " . $status . ", 0, 0)";
+		
 		mysql_query($query);
 	} else if ($type == 3) { // project
 		$word = checkEmpty(trim($_POST['word']));
