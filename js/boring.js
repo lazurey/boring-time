@@ -78,7 +78,7 @@ function actAchForm() {
 	    
 	    var $form = $(this),
 	        title = $form.find('input[name="title"]').val(),
-	        desc = $("input[name='desc']").val();
+	        desc = $("#desc").val();
 
 	    var post_str = "title=" + title + "&desc=" + desc;
 
@@ -114,6 +114,18 @@ function achieveIt(aid) {
 		}).done(function(data) {
 			location.href = "achievement-list.php";
 		});
+	}
+}
+
+function filterAchieve(type) {
+	if (type == 1) { // All
+		$('.achieve-table tr').show();
+	} else if (type == 2) { // Done
+		$('.achieve-table tr.success').show();
+		$('.achieve-table tr.error').hide();
+	} else { // Undo
+		$('.achieve-table tr.success').hide();
+		$('.achieve-table tr.error').show();
 	}
 }
 

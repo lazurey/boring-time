@@ -7,7 +7,7 @@
 	<form name="add-achieve" id="add-achieve" method="post" action="add-achieve.php">
 		<input type="text" name="title" placeholder="成就名称" required>
 		<br>
-		<textarea name="desc" placeholder="成就说明" required>
+		<textarea name="desc" placeholder="成就说明" id="desc" required>
 		</textarea>
 		<br>
 		<input type="submit" value="提交" class="btn">

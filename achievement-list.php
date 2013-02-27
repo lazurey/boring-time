@@ -10,14 +10,14 @@
 				添加成就
 			</a>
 			<?php } else { ?>
-			<a href="https://jinshuju.net/f/512d579224290a2ee7001753">添加成就</a>
+			<a class="btn" href="https://jinshuju.net/f/512d579224290a2ee7001753">添加成就</a>
 			<?php } ?>
 		</div>
 		<div class="span4">
 			<div class="btn-group" data-toggle="buttons-radio">
-				<button type="button" class="btn">所有</button>
-				<button type="button" class="btn">已完成</button>
-				<button type="button" class="btn">未完成</button>
+				<button type="button" class="btn active" onclick="filterAchieve(1);">所有</button>
+				<button type="button" class="btn" onclick="filterAchieve(2);">已完成</button>
+				<button type="button" class="btn" onclick="filterAchieve(3);">未完成</button>
 			</div>
 		</div>
 	</section>
@@ -27,10 +27,11 @@
 			<th class="achieve-title">成就</th>
 		</tr>
 		<?php 
-			$query = "SELECT a . * , r.rid FROM bt_achievement a ";
-			$query .= " LEFT JOIN bt_relate r ON a.uid = r.aid ";
-			$query .= " AND a.aid = r.bid AND r.rtype = 2 ";
+			$query = "SELECT a.* , r.rid FROM bt_achievement a ";
+			$query .= " LEFT JOIN bt_relate r ON ";
+			$query .= " a.aid = r.bid AND r.rtype = 2 and r.aid = " . $cook_uid;
 			$query .= " WHERE 1 = 1 ORDER BY a.aid DESC ";
+			// echo $query;
 			$result = mysql_query($query);
 			$html = "";
 			if (mysql_num_rows($result) > 0) {
