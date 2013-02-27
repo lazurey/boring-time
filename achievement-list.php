@@ -65,6 +65,16 @@
 	你可以<a href="https://jinshuju.net/f/512d579224290a2ee7001753" target="_blank">提交</a>你觉得好玩的成就, 也可以标记已经达成的成就. 总之就是无聊的时候<a href="http://lazurey.comeze.com/boring-time/boring-thing.php?tid=9">刷成就</a>也是一种选择.
 </p>
 </article>
+<article class="container">
+<h4>被最多人完成的成就:</h4>
+<ul>
+	<li></li>
+</ul>
+<h4>成就完成最多的人:</h4>
+<ul>
+	<li></li>
+</ul>
+</article>
 <?php 
 	include('footer.php');
 ?>
