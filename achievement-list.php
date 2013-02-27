@@ -42,7 +42,12 @@
 						$html .= "<tr class='error'><td class='achieve-process'>-</td>";
 					}
 					$html .= "<td class='achieve-desc'><h5 class='achieve-title'>" . $row['title'] . "</h5>";
-					$html .= "<p>" . $row['description'];
+
+					$order   = array("\r\n", "\n", "\r");
+					$replace = '<br />';
+					$text = str_replace($order, $replace, $row['description']);
+
+					$html .= "<p>" . $text;
 					if (!($row['rid'] > 0 && $row['rid'] != "NULL")) {
 						$html .= "<br><a class='btn' onclick='achieveIt(" . $row['aid'] . ")'>成就达成</a></p>";
 					}
@@ -54,6 +59,11 @@
 			print $html;
 		?>
 	</table>
+</article>
+<article class="container">
+<p>
+	你可以<a href="https://jinshuju.net/f/512d579224290a2ee7001753" target="_blank">提交</a>你觉得好玩的成就, 也可以标记已经达成的成就. 总之就是无聊的时候<a href="http://lazurey.comeze.com/boring-time/boring-thing.php?tid=9">刷成就</a>也是一种选择.
+</p>
 </article>
 <?php 
 	include('footer.php');

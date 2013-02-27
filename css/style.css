@@ -149,8 +149,9 @@ footer {
 }
 .achieve-table .achieve-desc p {
 	display: none;
+	line-height: 26px;
 }
 
-.achieve-table .achieve-desc {
+.achieve-table .achieve-desc h5 {
 	cursor: pointer;
 }
