@@ -18,6 +18,10 @@
 			echo "<script> location.href='login.php';</script>";
 		}
 	}
+
+	if (isset($_POST['user_id'])) {
+		setcookie("uname", trim($_POST['user_id']), time() + 31536000);
+	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
