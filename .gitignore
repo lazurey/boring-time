@@ -11,3 +11,5 @@ Thumbs.db
 db.inc.php
 db_local.inc.php
 db_prod.inc.php
+demo.html
+LICENSE.txt
