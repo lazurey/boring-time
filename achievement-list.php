@@ -72,7 +72,7 @@
 		<ul>
 			<?php 
 				$query = "select count(*) c, u.uid, u.name from bt_relate r, bt_user u ";
-				$query .= "where r.aid = u.uid group by r.aid order by c desc limit 0, 10";
+				$query .= "where r.aid = u.uid and r.rtype = 2 group by r.aid order by c desc limit 0, 10";
 				$result = mysql_query($query);
 				if (mysql_num_rows($result) > 0) {
 					while ($row = mysql_fetch_array($result)) {
@@ -88,7 +88,7 @@
 		<ul>
 			<?php 
 				$query = "select count(*) c, a.aid, a.title from bt_relate r, bt_achievement a";
-				$query .= " where r.bid = a.aid group by r.bid order by c desc limit 0, 10";
+				$query .= " where r.bid = a.aid and r.rtype = 2 group by r.bid order by c desc limit 0, 10";
 				$result = mysql_query($query);
 				if (mysql_num_rows($result) > 0) {
 					while ($row = mysql_fetch_array($result)) {
