@@ -27,6 +27,10 @@ ul li {
 	margin: 10px 0;
 }
 
+ul.nav li a.feature {
+	color: #FE4365;
+}
+
 .home-guess {
 	background: white;
 	border-top: 22px solid gray;
@@ -154,6 +158,17 @@ footer {
 
 .achieve-table .achieve-desc h5 {
 	cursor: pointer;
+}
+
+.honor-list ul li {
+	line-height: 24px;
+}
+
+article.about-main {
+	width: 600px;
+	padding: 20px;
+	font-size: 16px;
+	line-height: 22px;
 }
 
 /* 列表 */

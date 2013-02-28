@@ -1,5 +1,6 @@
 <?php 
 	include 'db.inc.php';
+	include 'func.php';
 	mysql_query("SET NAMES 'utf8'");
 
 	$loginFlag = false;

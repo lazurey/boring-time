@@ -44,13 +44,10 @@
 		<div class="navbar-inner">
 		    <a class="brand" href="index.php">无聊之集</a>
 			<ul class="nav">
-				<li>
-					<a href="index.php">首页</a>
-				</li>
 				<li><a href="boring-list.php?type=1">建议</a></li>
 				<li><a href="boring-list.php?type=2">跪求</a></li>
 				<li><a href="boring-list.php?type=3">项目</a></li>
-				<li><a href="achievement-list.php">成就</a></li>
+				<li><a class="feature" href="achievement-list.php">成就 <sup>new</sup></a></li>
 				<li><a href="about.php">关于</a></li>
 			</ul>
 			<ul class="nav" style="float:right;">
