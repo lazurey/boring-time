@@ -42,7 +42,7 @@
 * 数据表在bt.sql中.
 * bt_relate, rtype定义:
 
-| type | aid | bid |
-| ---- | --- | --- |
-|  1   | uid | tid |
-|  2   | uid | aid |
+| type | aid | bid | remark |
+| ---- | --- | --- | ------ |
+|  1   | uid | tid | 事情和用户关系 |
+|  2   | uid | aid | 成就和用户关联 |
