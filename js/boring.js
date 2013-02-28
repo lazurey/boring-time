@@ -129,6 +129,27 @@ function filterAchieve(type) {
 	}
 }
 
+function goodScore(tid) {
+	addRelate(3, tid);
+}
+
+function badScore(tid) {
+	addRelate(4, tid);
+}
+
+function addRelate(type, bid) { // bt_relate表中的bid
+	if (bid > 0 && bid != 'undefined') {
+		var post_str = "bid=" + bid + "&type=" + type;
+		$.ajax({
+			url: "add-relate.php",
+			data: post_str,
+			type: "POST"
+		}).done(function(data) {
+			window.location.reload();
+		});
+	}
+}
+
 $(function() {
 	// for the add item page form
 	addNewItem();

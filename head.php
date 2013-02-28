@@ -33,6 +33,8 @@
 	<title>无聊之集 - 碎片时间整理利用</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/boring.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

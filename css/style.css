@@ -195,3 +195,24 @@ footer {
 .boring-project-list li a:hover {
 	background: #FE4365;
 }
+
+/* 条目页面 */
+.score-bar a {
+	line-height: 22px;
+	font-size: 22px;
+}
+.score-bar a i, .score-bar i {
+	font-size: 16px;
+	line-height: 22px;
+	background: none;
+	width: 22px;
+	height: 22px;
+}
+
+.score-bar a:hover i {
+	color: #FFFFFF;
+}
+
+.score-bar i {
+	color: #FA6900;
+}

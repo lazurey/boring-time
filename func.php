@@ -32,4 +32,20 @@ function adminGroupCheck ($uid) {
 	}
 	return false;
 }
+
+function checkScore($uid, $tid) {
+	$query = "SELECT * FROM bt_relate where rtype in (3, 4) and aid = " . $uid . " and bid = " . $tid;
+	$result = mysql_query($query);
+	if (mysql_num_rows($result) > 0) {
+		$score = mysql_fetch_array($result);
+		if ($score['rtype'] == 3) { // good
+			return 1;
+		} else { // bad
+			return 2;
+		}
+	} else { // didn't give a score
+		return 0;
+	}
+	return 0;
+}
 ?>

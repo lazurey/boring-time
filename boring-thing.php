@@ -2,7 +2,8 @@
 	include('head.php');
 	// standard page template
 	if (isset($_GET['tid'])) {
-		$query = getItemQuerySql(intval(trim($_GET['tid'])));
+		$tid = intval(trim($_GET['tid']));
+		$query = getItemQuerySql($tid);
 		$result = mysql_query($query);
 		if (mysql_num_rows($result) > 0) {
 			$thing = mysql_fetch_array($result);
@@ -18,6 +19,23 @@
 			// echo "<p>" . $thing['description'] . "</p>";
 			echo "<p>" . $text . "</p>";
 			?>
+			<div class="score-bar">
+				<?php 
+					$scoreFlag = checkScore($cook_uid, $tid);
+					if ($scoreFlag == 0) {
+						echo "<a href='#nogo' onclick='goodScore(" . $tid . ");'><i class='icon-sun'></i></a>&nbsp;";
+					} else {
+						echo "<i class='icon-sun-inv'></i>";
+					}
+					echo "(" . $thing['good'] . ")&nbsp;&nbsp;&nbsp;&nbsp;";
+					if ($scoreFlag == 0) {
+						echo "<a href='#nogo' onclick='badScore(" . $tid . ");'><i class='icon-rain'></i></a>";
+					} else {
+						echo "<i class='icon-rain-inv'></i>&nbsp;";
+					}
+					echo "(" . $thing['bad'] . ")&nbsp;&nbsp;&nbsp;&nbsp;";
+				 ?>
+			</div>
 				</article>
 			<?php
 		} else {
