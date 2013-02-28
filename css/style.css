@@ -155,3 +155,43 @@ footer {
 .achieve-table .achieve-desc h5 {
 	cursor: pointer;
 }
+
+/* 列表 */
+.boring-list ul li {
+	float: left;
+	margin: 5px 10px;
+}
+
+.boring-list ul li a {
+	line-height: 20px;
+	background: #E0E4CC;
+	padding: 5px;
+	color: #FE4365;
+}
+
+.boring-list ul li a:hover {
+	background: #A7DBD8;
+	color: #FE4365;
+}
+
+.boring-project-list li {
+	font-size: 60px;
+	font-weight: bold;
+	width: 80px;
+	height: 80px;
+	line-height: 80px;
+	float: left;
+	margin: 0 20px 20px 0;
+	padding: 10px;
+	text-align: center;
+	background: #69D2E7;
+	box-shadow: 5px 5px 5px -3px #C5C5C5;
+}
+
+.home-project ul li a {
+	color: #FFFFFF;
+}
+
+.boring-project-list li a:hover {
+	background: #FE4365;
+}

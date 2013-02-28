@@ -5,7 +5,7 @@
 <article class="container min-main">
 	<section class="control-section clearfix">
 		<div class="span6">
-			<?php if ($cook_uid == 1) { ?>
+			<?php if (adminGroupCheck($cook_uid)) { ?>
 			<a class="btn" href="add-achievement.php">
 				添加成就
 			</a>

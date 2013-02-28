@@ -24,4 +24,12 @@ function checkEmpty($str) {
 		return $str;
 	}
 }
+
+function adminGroupCheck ($uid) {
+	$admin_array = array(1, 8);
+	if (in_array($uid, $admin_array)) {
+		return true;
+	}
+	return false;
+}
 ?>

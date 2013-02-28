@@ -1,6 +1,7 @@
 <?php 
 	include('head.php');
 	// standard page template
+	if (adminGroupCheck($cook_uid)) {
 ?>
 <article class="container min-main">
 	<h2>添加一个成就</h2>
@@ -14,6 +15,16 @@
 	</form>
 </article>
 <?php 
+} else {
+	?>
+	<article class="container min-main">
+		<div class="alert alert-error">
+		  <h4>页面不存在!</h4>
+		  <p>别找了, 回<a href="index.php">首页</a>吧.</p>
+		</div>
+	</article>
+	<?php
+}
 	include('footer.php');
 ?>
 </body>
