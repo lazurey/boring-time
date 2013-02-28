@@ -10,6 +10,9 @@
 	<p>
 		<a href="achievement-list.php">成就</a>: 是一个刷成就的无聊页面, 你可以<a href="https://jinshuju.net/f/512d579224290a2ee7001753" target="_blank">提交</a>你觉得好玩的成就, 也可以标记已经达成的成就. 总之就是无聊的时候<a href="http://lazurey.comeze.com/boring-time/boring-thing.php?tid=9">刷成就</a>也是一种选择.
 	</p>
+	<p>
+		听说有人需要<a href="counter.php">计数器</a>, 这里有一个.	
+	</p>
 </article>
 <?php 
 	include('footer.php');

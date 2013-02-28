@@ -150,6 +150,27 @@ function addRelate(type, bid) { // bt_relate表中的bid
 	}
 }
 
+function minusCounter(id) {
+	changeCounter(2, id);
+}
+
+function plusCounter(id) {
+	changeCounter(1, id);
+}
+
+function changeCounter(type, id) {
+	if (id > 0 && id != 'undefined') {
+		var post_str = "id=" + id + "&type=" + type;
+		$.ajax({
+			url: "count.php",
+			data: post_str,
+			type: "POST"
+		}).done(function(data) {
+			window.location.reload();
+		});
+	}
+}
+
 $(function() {
 	// for the add item page form
 	addNewItem();
