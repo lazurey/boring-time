@@ -66,14 +66,39 @@
 </p>
 </article>
 <article class="container">
-<h4>被最多人完成的成就:</h4>
-<ul>
-	<li></li>
-</ul>
-<h4>成就完成最多的人:</h4>
-<ul>
-	<li></li>
-</ul>
+	<hr>
+	<div class="span5">
+		<h4>成就完成最多的人:</h4>
+		<ul>
+			<?php 
+				$query = "select count(*) c, u.uid, u.name from bt_relate r, bt_user u ";
+				$query .= "where r.aid = u.uid group by r.aid order by c desc limit 0, 10";
+				$result = mysql_query($query);
+				if (mysql_num_rows($result) > 0) {
+					while ($row = mysql_fetch_array($result)) {
+						echo "<li>" . $row['name'] . "完成" . $row['c'] . "项成就";
+					}
+				}
+			?>
+			<li></li>
+		</ul>
+	</div>
+	<div class="span5">
+		<h4>被最多人完成的成就:</h4>
+		<ul>
+			<?php 
+				$query = "select count(*) c, a.aid, a.title from bt_relate r, bt_achievement a";
+				$query .= " where r.bid = a.aid group by r.bid order by c desc limit 0, 10";
+				$result = mysql_query($query);
+				if (mysql_num_rows($result) > 0) {
+					while ($row = mysql_fetch_array($result)) {
+						echo "<li>" . $row['title'] . "被" . $row['c'] . "个人完成";
+					}
+				}
+			 ?>
+			<li></li>
+		</ul>
+	</div>
 </article>
 <?php 
 	include('footer.php');
