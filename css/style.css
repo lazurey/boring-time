@@ -249,6 +249,10 @@ article.about-main {
 	line-height: 20px;
 }
 
+.counter-list .count-btn:hover {
+	background: #FA6900;
+}
+
 .counter-list .count-now {
 	font-size: 30px;
 }
