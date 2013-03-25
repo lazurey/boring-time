@@ -184,6 +184,6 @@ $(function() {
 	actRegForm();
 	actAchForm();
 	addAccordionTable();
-	checkIE();
+	// checkIE();
 });
 
