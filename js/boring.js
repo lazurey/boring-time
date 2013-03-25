@@ -171,11 +171,19 @@ function changeCounter(type, id) {
 	}
 }
 
+function checkIE() {
+	var ie = navigator.userAgent.indexOf('MSIE') > -1;
+	if (ie != false) {
+		location.href = "ie-die.php";
+	}
+}
+
 $(function() {
 	// for the add item page form
 	addNewItem();
 	actRegForm();
 	actAchForm();
 	addAccordionTable();
+	checkIE();
 });
 

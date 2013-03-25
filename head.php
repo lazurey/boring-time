@@ -6,7 +6,8 @@
 	$loginFlag = false;
 	$reqUrl = trim($_SERVER["REQUEST_URI"]);
 	$frontFlag = false;
-	if (preg_match("/index.php/i", $reqUrl) || preg_match("/register.php/i", $reqUrl)) {
+	if (preg_match("/index.php/i", $reqUrl) || preg_match("/register.php/i", $reqUrl)
+			|| preg_match("/ie-die.php/i", $reqUrl)) {
 		$frontFlag = true;
 	}
 	if (isset($_COOKIE['uid'])) {
