@@ -11,6 +11,10 @@ body {
 	background: url(../images/bg.png);
 }
 
+.hidden {
+	display: none;
+}
+
 ul li {
 	list-style: none;
 }
@@ -56,8 +60,17 @@ ul.nav li a.feature {
 	padding: 10px;
 }
 
-.home-suggestion ul li , .home-request ul li {
+.home-suggestion ul li, .home-request ul li {
 	line-height: 30px;
+}
+
+.home-suggestion ul li a, .home-request ul li a {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 180px;
+	display: block;
+	padding: 0 5px;
 }
 
 .home-project {
@@ -214,7 +227,7 @@ article.about-main {
 /* 条目页面 */
 .score-bar a {
 	line-height: 22px;
-	font-size: 22px;
+	font-size: 19px;
 }
 .score-bar a i, .score-bar i {
 	font-size: 16px;
@@ -232,6 +245,10 @@ article.about-main {
 	color: #FA6900;
 }
 
+.score-bar {
+	border-top: 1px dotted gold;
+	width: 300px;
+}
 /* 计数器 */
 .counter-list h5 {
 

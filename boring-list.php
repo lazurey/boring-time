@@ -15,7 +15,7 @@
 			if (mysql_num_rows($result) > 0) {
 				while ($row = mysql_fetch_array($result)) {
 					$title = "<span class='one-word'>" . $row['one_word'] . "</span>";
-					$html .= "<li><a href='boring-thing.php?tid=" . $row['tid'] . "'>" . $title . "</a></li>";
+					$html .= "<li><a href='boring-thing.php?tid=" . $row['tid'] . "' title='" . $row['title'] . "'>" . $title . "</a></li>";
 				}
 			}
 			$html .= "</ul>";

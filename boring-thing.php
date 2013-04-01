@@ -31,9 +31,9 @@
 					if ($scoreFlag == 0) {
 						echo "<a href='#nogo' onclick='badScore(" . $tid . ");'><i class='icon-rain'></i></a>";
 					} else {
-						echo "<i class='icon-rain-inv'></i>&nbsp;";
+						echo "<span><i class='icon-rain-inv'></i>&nbsp;";
 					}
-					echo "(" . $thing['bad'] . ")&nbsp;&nbsp;&nbsp;&nbsp;";
+					echo "(" . $thing['bad'] . ")&nbsp;&nbsp;&nbsp;&nbsp;<span>";
 				 ?>
 			</div>
 				</article>

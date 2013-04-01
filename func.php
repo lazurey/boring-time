@@ -48,4 +48,16 @@ function checkScore($uid, $tid) {
 	}
 	return 0;
 }
+
+function getTodayBest() {
+	$query = "SELECT DISTINCT (t.type), MAX(t.tid) as tid, MAX(t.title) as title, MAX(t.good) as good "
+		. "FROM bt_thing t WHERE t.good > 0 GROUP BY t.type ORDER BY t.type, t.good DESC";
+	//print $query;
+	$result = mysql_query($query);
+	if (mysql_num_rows($result) > 0) {
+		return $result;
+	} else {
+		return false;
+	}
+}
 ?>

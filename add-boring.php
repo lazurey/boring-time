@@ -26,17 +26,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="span4 hidden">
 		<div class="control-group">
 			<label class="control-label" for="cat">分类</label>
 			<div class="controls">
-				<input type="text" id="cat" name="cat">
+				<input type="hidden" id="cat" name="cat" value="1">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="text" id="tag" name="tag">
+				<input type="hidden" id="tag" name="tag" value="1">
 			</div>
 		</div>
 	</div>
@@ -68,17 +68,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="span4 hidden">
 		<div class="control-group">
 			<label class="control-label" for="cat">分类</label>
 			<div class="controls">
-				<input type="text" id="cat" name="cat">
+				<input type="hidden" id="cat" name="cat" value="1">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="text" id="tag" name="tag">
+				<input type="hidden" id="tag" name="tag" value="1">
 			</div>
 		</div>
 	</div>
@@ -98,17 +98,17 @@
 			</div>
 		</div>
 	</div>
-	<div class="span4">
+	<div class="span4 hidden">
 		<div class="control-group">
 			<label class="control-label" for="cat">分类</label>
 			<div class="controls">
-				<input type="text" id="cat" name="cat">
+				<input type="hidden" id="cat" name="cat" value="1">
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="text" id="tag" name="tag">
+				<input type="hidden" id="tag" name="tag" value="1">
 			</div>
 		</div>
 	</div>

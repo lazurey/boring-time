@@ -34,15 +34,19 @@ $month = $today['month'];
 				</a>
 			</div>
 			<ul>
-				<li><i class="icon-time"></i>
-					<a href="/">一起来听豆瓣电台</a>
-				</li>
-				<li><i class="icon-time"></i><i class="icon-time"></i>
-					<a href="https://jinshuju.net">帮我填一个问卷</a>
-				</li>
-				<li><i class="icon-time"></i><i class="icon-time"></i><i class="icon-time"></i>
-					<a href="/">读书习惯养成计划</a>
-				</li>
+				<?php 
+					$todayBest = getTodayBest();
+					if ($todayBest) {
+						$timeIcon = "<i class='icon-time'></i>";
+						$todayBestHtml = "";
+						while ($row = mysql_fetch_array($todayBest)) {
+							$todayBestHtml .= "<li>" . $timeIcon . "<a href='boring-thing.php?tid=" . $row['tid'] . "'>&nbsp;";
+							$todayBestHtml .= $row['title'] . "</a></li>";
+							$timeIcon .= "<i class='icon-time'></i>";							
+						}
+						print $todayBestHtml;
+					}
+				?>
 			</ul>
 		</section>
 		<aside class="home-request clearfix">
@@ -72,12 +76,12 @@ $month = $today['month'];
 			</h4>
 			<ul class="clearfix">
 				<?php 
-					$query = getItemsQuerySql(3, 0, 10);
+					$query = getItemsQuerySql(3, 0, 12);
 					$result = mysql_query($query);
 					$html = "";
 					if (mysql_num_rows($result) > 0) {
 						while ($row = mysql_fetch_array($result)) {
-							$html .= "<li><a href='boring-thing.php?tid=" . $row['tid'] . "'>" . $row['one_word'] . "</a></li>";
+							$html .= "<li><a href='boring-thing.php?tid=" . $row['tid'] . "' title='" . $row['title'] . "'>" . $row['one_word'] . "</a></li>";
 						}
 					}
 					print $html;
