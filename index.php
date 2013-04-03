@@ -23,7 +23,7 @@ $month = $today['month'];
 					print $html;
 				?>
 		  	</ul>
-		  	<a href="boring-list.php?type=1"><i class="icon-arrow-right"></i>更多建议</a>
+		  	<a href="boring-list.php?type=1" class="more-suggest"><i class="icon-arrow-right"></i>更多建议</a>
 		</aside>
 		<section class="home-guess clearfix">
 			<div class="boring-today">
@@ -67,7 +67,7 @@ $month = $today['month'];
 					print $html;
 				?>
 		  	</ul>
-		  	<a href="boring-list.php?type=2"><i class="icon-arrow-right"></i>更多建议</a>
+		  	<a href="boring-list.php?type=2" class="more-suggest"><i class="icon-arrow-right"></i>更多建议</a>
 		</aside>
 		<section class="home-project clearfix">
 			<h4>
@@ -87,7 +87,7 @@ $month = $today['month'];
 					print $html;
 				?>
 		  	</ul>
-		  	<a href="boring-list.php?type=3"><i class="icon-arrow-right"></i>更多项目</a>
+		  	<a href="boring-list.php?type=3" class="more-suggest"><i class="icon-arrow-right"></i>更多项目</a>
 		</section>
 	</div>
 	<?php 

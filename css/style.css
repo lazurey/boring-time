@@ -64,6 +64,16 @@ ul.nav li a.feature {
 	line-height: 30px;
 }
 
+
+.home-suggestion ul, .home-request ul {
+	margin: 0;
+}
+
+.more-suggest {
+	float: right;
+	border-top: 1px dotted;
+}
+
 .home-suggestion ul li a, .home-request ul li a {
 	white-space: nowrap;
 	text-overflow: ellipsis;
