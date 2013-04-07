@@ -43,9 +43,11 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.tagsinput.css" />
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/boring.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tagsinput.js"></script>
 </head>
 <body>
 	<div class="navbar">

@@ -18,6 +18,13 @@
 			$text = str_replace($order, $replace, $thing['description']);
 			// echo "<p>" . $thing['description'] . "</p>";
 			echo "<p>" . $text . "</p>";
+			if ($thing['type'] == 3) {
+				echo "<p>联系人: " . $thing['contact'] . "</p>";
+			}
+			if ($thing['type'] != 2) {
+				echo "<p>分类: " . $thing['cat'] . "</p>";
+			}
+			echo "<p>标签: " . $thing['tag'] . "</p>";
 			?>
 			<div class="score-bar">
 				<?php 

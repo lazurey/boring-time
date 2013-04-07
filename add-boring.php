@@ -26,9 +26,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="span4 hidden">
+	<div class="span4">
 		<div class="control-group">
-			<label class="control-label" for="cat">分类</label>
+			<!--<label class="control-label" for="cat">分类</label>-->
 			<div class="controls">
 				<input type="hidden" id="cat" name="cat" value="1">
 			</div>
@@ -36,7 +36,7 @@
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="hidden" id="tag" name="tag" value="1">
+				<input type="hidden" id="tag" name="tag" value="">
 			</div>
 		</div>
 	</div>
@@ -64,21 +64,27 @@
 		<div class="control-group">
 			<label class="control-label" for="contact">联系方式</label>
 			<div class="controls">
-				<input type="email" id="contact" name="contact" placeholder="Email">
+				<input type="text" id="contact" name="contact" placeholder="Email" required>
 			</div>
 		</div>
 	</div>
-	<div class="span4 hidden">
+	<div class="span4">
 		<div class="control-group">
 			<label class="control-label" for="cat">分类</label>
 			<div class="controls">
-				<input type="hidden" id="cat" name="cat" value="1">
+				<select id="cat" name="cat">
+					<option value="1" selected>程序</option>
+					<option value="2">生活</option>
+					<option value="3">习惯</option>
+					<option value="4">运动</option>
+				</select>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="hidden" id="tag" name="tag" value="1">
+				<input type="text" id="tag" name="tag" value="">
+				<span>标签之间用逗号分隔, 使别人更快捷的找到这个条目</span>
 			</div>
 		</div>
 	</div>
@@ -98,17 +104,22 @@
 			</div>
 		</div>
 	</div>
-	<div class="span4 hidden">
+	<div class="span4">
 		<div class="control-group">
 			<label class="control-label" for="cat">分类</label>
 			<div class="controls">
-				<input type="hidden" id="cat" name="cat" value="1">
+				<select id="cat" name="cat">
+					<option value="1" selected>程序</option>
+					<option value="2">生活</option>
+					<option value="3">习惯</option>
+					<option value="4">运动</option>
+				</select>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="tag">标签</label>
 			<div class="controls">
-				<input type="hidden" id="tag" name="tag" value="1">
+				<input type="text" id="tag" name="tag" value="">
 			</div>
 		</div>
 	</div>

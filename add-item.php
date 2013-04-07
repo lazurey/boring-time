@@ -5,7 +5,7 @@ if (isset($_POST['type'])) {
 	$title = trim($_POST['title']);
 	$desc = trim($_POST['desc']);
 	$uid = $cook_uid;
-	$cat = trim($_POST['cat']);
+	$cat = intval(trim($_POST['cat']));
 	$tag = trim($_POST['tag']);
 	$status = trim($_POST['status']);
 
