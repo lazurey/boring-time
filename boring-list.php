@@ -23,22 +23,40 @@
 
 	} else {
 	?>
-		<article class="container min-main boring-list">
-		<?php
-			$query = getItemsQuerySql($type, 0, 20);
-			$result = mysql_query($query);
-			$html = "<ul>";
-			if (mysql_num_rows($result) > 0) {
-				while ($row = mysql_fetch_array($result)) {
-					$title = $row['title'];
-					$html .= "<li><a href='boring-thing.php?tid=" . $row['tid'] . "'>" . $title . "</a></li>";
-				}
+	<article class="container min-main boring-list">
+
+	<?php
+		$query = getItemsQuerySql($type, 0, 20);
+		$result = mysql_query($query);
+		$html = "<ul>";
+		if (mysql_num_rows($result) > 0) {
+			while ($row = mysql_fetch_array($result)) {
+				$title = $row['title'];
+				$html .= "<li><a href='boring-thing.php?tid=" . $row['tid'] . "'>" . $title . "</a></li>";
 			}
-			$html .= "</ul>";
-			echo $html;
+		}
+		$html .= "</ul>";
+		echo $html;
 	}
 ?>
-</article>
+	<!-- <div class="span4" id="tag-cloud">
+		<a href="/" rel="1">ww</a>
+		<a href="/" rel="21">aaaaa</a>
+		<a href="/" rel="13">ddd</a>
+		<a href="/" rel="14">asdf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="20">daf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="2">daf</a>
+		<a href="/" rel="29">daf</a>
+		<a href="/" rel="30">dfa</a>
+		<a href="/" rel="34">efffff</a>
+	</div> -->
+	</article>
 <?php 
 	include('footer.php');
 ?>

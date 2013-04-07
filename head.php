@@ -48,6 +48,7 @@
 	<script type="text/javascript" src="js/boring.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.tagsinput.js"></script>
+    <script type="text/javascript" src="js/jquery.tagcloud.js"></script>
 </head>
 <body>
 	<div class="navbar">

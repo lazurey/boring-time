@@ -186,6 +186,7 @@ $(function() {
 	actAchForm();
 	addAccordionTable();
 	$('#tag').tagsInput();
+	$('#tag-cloud a').tagcloud();
 	// checkIE();
 });
 
