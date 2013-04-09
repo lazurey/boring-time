@@ -1,10 +1,14 @@
 <?php 
-function getItemsQuerySql($type, $start, $sum) {
-	$query = "SELECT * FROM bt_thing WHERE 1 = 1 ";
-	if ($type > 0 && $type < 4) {
-		$query .= " and type = " . $type . " ";
+function getItemsQuerySql($type, $start, $sum, $tag = 0) {
+	$query = "SELECT t.* FROM bt_thing t WHERE 1 = 1 ";
+	if ($tag > 0) {
+		$query = "SELECT t.* FROM bt_thing t, bt_item i WHERE t.tag LIKE CONCAT('%', i.name, '%') and i.id = " . $tag;
+		//select t.*, i.name from bt_thing t, bt_item i where t.tag like CONCAT('%', i.name, '%') and i.id = 13	
 	}
-	$query .= "ORDER BY tid DESC ";
+	if ($type > 0 && $type < 4) {
+		$query .= " and t.type = " . $type . " ";
+	}
+	$query .= "ORDER BY t.tid DESC ";
 	if (is_int($start) && is_int($sum)) {
 		$query .= " LIMIT " . $start . ", " . $sum . " ";
 	}
@@ -59,5 +63,32 @@ function getTodayBest() {
 	} else {
 		return false;
 	}
+}
+
+function saveTags($tagStr) {
+	$tagArr = explode(',', $tagStr);
+	foreach ($tagArr as $tag) {
+		if(strlen(trim($tag)) > 0) {
+			$query = "SELECT * FROM bt_item WHERE type = 3 AND name = '" . $tag . "'";
+			$result = mysql_query($query);
+			if (mysql_num_rows($result) < 1) {
+				$insertSql = "INSERT INTO bt_item () VALUES ";
+				$insertSql .= "('', 3, '" . $tag . "', '1')";
+				mysql_query($insertSql);
+			} else {
+				$query = "UPDATE bt_item set remark = remark + 1 WHERE type = 3 and name = '" . $tag . "'";
+				mysql_query($query);
+			}
+		}
+	}
+}
+
+/*
+$condition = " AND a = b "
+$sort = "order by id desc"
+*/
+function getBtItem ($type, $condition = " 1 = 1 ", $sort = " ORDER BY id DESC") {
+	$query = "SELECT * FROM bt_item WHERE type =  " . $type . " AND " . $condition . $sort;
+	return $query;
 }
 ?>

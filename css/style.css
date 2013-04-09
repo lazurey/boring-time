@@ -283,3 +283,12 @@ article.about-main {
 .counter-list .count-now {
 	font-size: 30px;
 }
+
+#tag-cloud a {
+	margin: 0 5px;
+}
+
+#tag-cloud a:hover {
+	background: none;
+	text-decoration: underline;
+}

@@ -21,5 +21,9 @@ if (isset($_POST['type'])) {
 		$query .= $uid . ", '" . $word . "', '" . $contact . "', " . $status . ", 0, 0)";
 		mysql_query($query);
 	}
+
+	if (strlen($tag) > 0) {
+		saveTags($tag);
+	}
 }
 ?>
